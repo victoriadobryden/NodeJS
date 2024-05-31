@@ -5,13 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4302166-58ac-45bf-87e1-20f5a1d378cb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Task-block4.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/witnessController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dto/witnessDto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/sprava.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/witness.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routers/witnessRoutes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/spravaService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/groups/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/students/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/address/address.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/group/groupDto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/group/groupSaveDto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/queryDto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/student/studentDetailsDto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/student/studentInfoDto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/student/studentQueryDto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/student/studentSaveDto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/group.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/student.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routers/groups/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routers/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routers/students/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/group/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/student/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/controllers/group.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/services/student.test.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,26 +53,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.nodejs-sample/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.nodejs-sample: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;&lt;unknown&gt;&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/ProfITsoft Internship/Task-block4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.devel.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\ProfITsoft Internship\\Task-block4\\nodejs-sample\\nodejs-entity3-service\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.nodejs-sample/Dockerfile.executor": "Run",
+    "Docker.nodejs-sample: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/ProfITsoft Internship/Task-block4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.devel.executor": "Run",
+    "npm.start.executor": "Run",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "C:\\ProfITsoft Internship\\NodeJS\\nodejs-sample-main\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Docker.nodejs-sample/Dockerfile">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
@@ -132,5 +153,8 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

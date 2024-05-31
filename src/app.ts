@@ -1,9 +1,9 @@
 import express from 'express';
-import routers from './routers';
-import config from './config';
 import log4js, { Configuration } from 'log4js';
 import mongoose, { ConnectOptions } from 'mongoose';
 import Consul, { ConsulOptions } from 'consul';
+import witnessRoutes from './routers/witnessRoutes';
+import config from './config';
 
 type EnvType = 'dev' | 'prod';
 
@@ -17,7 +17,7 @@ const consulServer = new Consul(config.consul.server[env] as ConsulOptions);
 const prefix = `config/${config.consul.service.name}`;
 
 type ConsulResult = {
-	Value: string | number,
+  Value: string | number,
 };
 
 const getConsulValue = async (key: string) => {
@@ -25,7 +25,7 @@ const getConsulValue = async (key: string) => {
   return result?.Value;
 };
 
-export default async () => {
+const createApp = async () => {
   const app = express();
 
   log4js.configure(config.log4js as Configuration);
@@ -50,7 +50,7 @@ export default async () => {
     next();
   });
 
-  app.use('/', routers);
+  app.use('/api', witnessRoutes);
 
   const port = await getConsulValue(`${env}/port`) as number;
   const address = await getConsulValue(`${env}/address`) as string;
@@ -67,3 +67,5 @@ export default async () => {
 
   return app;
 };
+
+export default createApp;
